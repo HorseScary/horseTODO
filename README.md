@@ -1,3 +1,3 @@
-# pyTODO
+# horseTODO
 
 A basic todolist script.
