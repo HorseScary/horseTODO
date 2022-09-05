@@ -8,4 +8,5 @@ setup(name="horsetodo",
     author_email="horsescary@gmail.com",
     license="GPL3",
     packages=["horsetodo"],
+    scripts=['bin/horsetodo'],
     zip_safe=True)

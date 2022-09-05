@@ -1,7 +1,3 @@
-'''
- * remove item from list
-'''
-from operator import index
 import random
 
 def addItem(file, newLine):
@@ -14,9 +10,6 @@ def show(file):
     TODO = f.readlines()
     f.close()
 
-    for i in range(len(TODO)):
-        TODO[i] = TODO[i].replace("\n", "")
-
     return(TODO)
 
 def showIndexed(file):
@@ -24,9 +17,9 @@ def showIndexed(file):
     indexedTODO = ""
 
     for i in range(len(TODO)):
-        indexedTODO += f"{i + 1}) {TODO[i]}\n"
+        indexedTODO += f"{i + 1}) {TODO[i]}"
     
-    return(indexedTODO[:-2])
+    return(indexedTODO[:-1])
 
 def removeItem(file, line):
     f = open (file, "r")
