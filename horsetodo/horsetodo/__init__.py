@@ -1,5 +1,3 @@
-import random
-
 def addItem(file, newLine):
     f = open(file, "a")
     f.write(f"{str(newLine)}\n")
