@@ -19,6 +19,17 @@ def showIndexed(file):
     
     return(indexedTODO[:-1])
 
+# output for "custom" waybar module
+def showIndexedWaybar(file):
+    indexedTODO = showIndexed(file)
+    escapedTODO = ""
+
+    for i in indexedTODO:
+        escapedTODO += i.replace("\n", "\\n")
+
+    return ('{"text":"TODO", "tooltip":"' + escapedTODO + '"}')
+
+
 def removeItem(file, line):
     f = open (file, "r")
     TODO = f.readlines()
